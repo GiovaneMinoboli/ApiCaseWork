@@ -3,26 +3,21 @@ const express = require('express')
 const server =  express()
 
 server.use(express.json())
-//const PORT = process.env.PORT || 8877
 server.listen(8000)
 
-/*server.get('/', (req, res) => {
-    res.json({
-        msg: 'OK'
-    })
-})*/
 server.get('/', (req, res) => {
     res.json({
          message: 'Giovane'
         })
 })
 
-/*server.get('/numbers', async (req, res) => {
+server.get('/numbers', async (req, res) => {
     let id = 1
     let cont = 1
     let num = []
     let aux
-    while (cont = 1) {
+           /*cont = 1*/
+    while (id <= 10) {
         try {
             const { data } = await api.get(`numbers?page=${id}`)
             
@@ -44,7 +39,7 @@ server.get('/', (req, res) => {
                 console.log(id)
                 id++
             } else {
-                cont = 2
+                //cont = 2
             }
         } catch (error) {
             console.log(num)
@@ -52,4 +47,4 @@ server.get('/', (req, res) => {
         }
     }
     return res.send({ numbers: num })
-})*/
+})
