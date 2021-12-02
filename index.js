@@ -3,13 +3,19 @@ const express = require('express')
 const server =  express()
 
 server.use(express.json())
-server.listen(8000)
+const PORT = process.env.PORT || 8877
+//server.listen(8000)
 
 server.get('/', (req, res) => {
+    res.send({
+        msg: 'OK'
+    })
+})
+/*server.get('/', (req, res) => {
     res.json({
          message: 'Giovane'
         })
-})
+})*/
 
 /*server.get('/numbers', async (req, res) => {
     let id = 1
