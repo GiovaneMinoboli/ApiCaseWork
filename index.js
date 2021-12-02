@@ -6,11 +6,12 @@ server.use(express.json())
 server.listen(8000)
 
 server.get('/', (req, res) => {
-    res.send({ message: 'Giovane'})
+    res.json({
+         message: 'Giovane'
+        })
 })
 
-// enquanto o array numeros for diferente de vazio, pega o conteudo, faz o processo de ordenação, armazena e mostra
-server.get('/numbers', async (req, res) => {
+/*server.get('/numbers', async (req, res) => {
     let id = 1
     let cont = 1
     let num = []
@@ -45,4 +46,4 @@ server.get('/numbers', async (req, res) => {
         }
     }
     return res.send({ numbers: num })
-})
+})*/
