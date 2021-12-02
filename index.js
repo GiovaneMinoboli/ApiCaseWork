@@ -2,12 +2,12 @@ const api = require("./api")
 const express = require('express')
 const server =  express()
 
-server.use(express.json())
+//server.use(express.json())
 const PORT = process.env.PORT || 8877
 //server.listen(8000)
 
 server.get('/', (req, res) => {
-    res.send({
+    res.json({
         msg: 'OK'
     })
 })
